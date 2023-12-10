@@ -1,0 +1,182 @@
+[
+  {
+    "id": "doc001",
+    "title": "Introduction to Machine Learning",
+    "content": "Machine learning is a subset of artificial intelligence that enables systems to learn and improve from experience without being explicitly programmed. It focuses on developing computer programs that can access data and use it to learn for themselves. The process begins with observations or data, such as examples, direct experience, or instruction, to look for patterns in data and make better decisions in the future.",
+    "metadata": {"category": "AI", "difficulty": "beginner", "tags": ["ml", "ai", "basics"]}
+  },
+  {
+    "id": "doc002",
+    "title": "Deep Learning Fundamentals",
+    "content": "Deep learning is a subset of machine learning that uses neural networks with multiple layers to analyze various factors of data. Each layer learns to transform the input data into more abstract and composite representations. Deep learning models can achieve state-of-the-art accuracy on complex tasks like image classification, speech recognition, and natural language processing.",
+    "metadata": {"category": "AI", "difficulty": "intermediate", "tags": ["neural-networks", "deep-learning"]}
+  },
+  {
+    "id": "doc003",
+    "title": "Natural Language Processing Overview",
+    "content": "Natural Language Processing (NLP) is a field of artificial intelligence that gives machines the ability to read, understand, and derive meaning from human languages. NLP combines computational linguistics with statistical, machine learning, and deep learning models. Applications include machine translation, sentiment analysis, chatbots, and text summarization.",
+    "metadata": {"category": "AI", "difficulty": "intermediate", "tags": ["nlp", "text-processing"]}
+  },
+  {
+    "id": "doc004",
+    "title": "Information Retrieval Systems",
+    "content": "Information retrieval is the science of searching for information in documents, searching for documents themselves, and searching for metadata that describes documents. The most visible application is web search engines like Google and Bing. Key techniques include inverted indexing, TF-IDF weighting, BM25 ranking, and more recently, semantic search using dense vector embeddings.",
+    "metadata": {"category": "Search", "difficulty": "intermediate", "tags": ["ir", "search", "indexing"]}
+  },
+  {
+    "id": "doc005",
+    "title": "BM25 Algorithm Explained",
+    "content": "BM25 (Best Matching 25) is a ranking function used by search engines to rank matching documents according to their relevance to a given search query. It is based on the probabilistic retrieval framework. BM25 improves upon TF-IDF by accounting for document length normalization and term frequency saturation. The formula uses parameters k1 (typically 1.2-2.0) and b (typically 0.75) to control these effects.",
+    "metadata": {"category": "Search", "difficulty": "advanced", "tags": ["bm25", "ranking", "lexical"]}
+  },
+  {
+    "id": "doc006",
+    "title": "Vector Databases and Embeddings",
+    "content": "Vector databases are specialized database systems designed to store and query high-dimensional vector embeddings efficiently. They enable semantic search by finding vectors that are similar to a query vector. Popular vector databases include Pinecone, Weaviate, Milvus, and FAISS. These systems use approximate nearest neighbor (ANN) algorithms to perform fast similarity searches on millions or billions of vectors.",
+    "metadata": {"category": "Database", "difficulty": "intermediate", "tags": ["vectors", "embeddings", "ann"]}
+  },
+  {
+    "id": "doc007",
+    "title": "Transformers Architecture",
+    "content": "The Transformer is a deep learning architecture that relies entirely on self-attention mechanisms, dispensing with recurrence and convolutions entirely. Introduced in the paper 'Attention is All You Need', transformers have become the dominant architecture for NLP tasks. Key components include multi-head self-attention, position-wise feed-forward networks, and positional encodings.",
+    "metadata": {"category": "AI", "difficulty": "advanced", "tags": ["transformers", "attention", "architecture"]}
+  },
+  {
+    "id": "doc008",
+    "title": "Semantic Search Techniques",
+    "content": "Semantic search seeks to improve search accuracy by understanding the searcher's intent and the contextual meaning of terms. Unlike lexical search which matches keywords, semantic search understands the meaning behind queries. It uses dense vector embeddings from language models to represent documents and queries in a shared semantic space, allowing matching based on meaning rather than exact word overlap.",
+    "metadata": {"category": "Search", "difficulty": "intermediate", "tags": ["semantic", "embeddings", "search"]}
+  },
+  {
+    "id": "doc009",
+    "title": "Hybrid Search Systems",
+    "content": "Hybrid search combines multiple retrieval methods to get the best of both worlds. Typically, it combines lexical search (like BM25) with semantic search (using embeddings). This approach can capture both exact keyword matches and semantic relationships. Fusion methods include Reciprocal Rank Fusion (RRF), weighted score combination, and learned fusion approaches.",
+    "metadata": {"category": "Search", "difficulty": "intermediate", "tags": ["hybrid", "fusion", "retrieval"]}
+  },
+  {
+    "id": "doc010",
+    "title": "Word Embeddings: Word2Vec and GloVe",
+    "content": "Word embeddings are dense vector representations of words that capture semantic meaning. Word2Vec uses neural networks to learn embeddings by predicting context words (CBOW) or predicting target words from context (Skip-gram). GloVe (Global Vectors) learns embeddings by factorizing a word co-occurrence matrix. These embeddings enable semantic operations like king - man + woman = queen.",
+    "metadata": {"category": "NLP", "difficulty": "intermediate", "tags": ["embeddings", "word2vec", "glove"]}
+  },
+  {
+    "id": "doc011",
+    "title": "Sentence Transformers",
+    "content": "Sentence Transformers (also known as SBERT) extends the BERT model to produce semantically meaningful sentence embeddings. By using siamese and triplet network structures, Sentence Transformers fine-tune BERT for semantic similarity tasks. Popular models include all-MiniLM-L6-v2 (fast and efficient) and all-mpnet-base-v2 (best quality). These embeddings are widely used for semantic search, clustering, and retrieval.",
+    "metadata": {"category": "NLP", "difficulty": "intermediate", "tags": ["sentence-transformers", "sbert", "embeddings"]}
+  },
+  {
+    "id": "doc012",
+    "title": "FAISS Library for Similarity Search",
+    "content": "FAISS (Facebook AI Similarity Search) is a library developed by Meta for efficient similarity search and clustering of dense vectors. It provides algorithms that search in sets of vectors of any size, even ones that cannot fit in RAM. FAISS supports various index types including flat (exact search), IVF (inverted file index), and HNSW (hierarchical navigable small world). It's the backbone of many production semantic search systems.",
+    "metadata": {"category": "Library", "difficulty": "intermediate", "tags": ["faiss", "similarity", "vectors"]}
+  },
+  {
+    "id": "doc013",
+    "title": "Cross-Encoders for Re-ranking",
+    "content": "Cross-encoders are neural models that take both a query and a document as input simultaneously and output a relevance score. Unlike bi-encoders which encode query and document separately, cross-encoders can capture fine-grained interactions between query and document tokens. They are commonly used for re-ranking the top results from an initial retrieval stage, improving precision at the cost of higher latency.",
+    "metadata": {"category": "Search", "difficulty": "advanced", "tags": ["cross-encoder", "re-ranking", "retrieval"]}
+  },
+  {
+    "id": "doc014",
+    "title": "Elasticsearch for Full-Text Search",
+    "content": "Elasticsearch is a distributed search and analytics engine built on Apache Lucene. It provides full-text search capabilities with features like fuzzy matching, phrase queries, and highlighting. Elasticsearch supports BM25 scoring by default and can scale to handle petabytes of data. It's commonly used for log analytics, application search, and enterprise search applications.",
+    "metadata": {"category": "Search", "difficulty": "intermediate", "tags": ["elasticsearch", "lucene", "full-text"]}
+  },
+  {
+    "id": "doc015",
+    "title": "Query Expansion Techniques",
+    "content": "Query expansion is a technique to improve recall by adding related terms to the original query. Methods include using synonyms from lexical resources like WordNet, pseudo-relevance feedback (expanding based on top retrieved documents), and learned expansion using word embeddings or language models. Query expansion helps address vocabulary mismatch between queries and documents.",
+    "metadata": {"category": "Search", "difficulty": "advanced", "tags": ["query-expansion", "recall", "vocabulary"]}
+  },
+  {
+    "id": "doc016",
+    "title": "Evaluation Metrics for Search",
+    "content": "Common evaluation metrics for information retrieval include Precision, Recall, F1 score, Mean Average Precision (MAP), Mean Reciprocal Rank (MRR), and Normalized Discounted Cumulative Gain (NDCG). Precision measures the fraction of retrieved documents that are relevant. Recall measures the fraction of relevant documents that are retrieved. NDCG accounts for the position of relevant documents in the ranked list.",
+    "metadata": {"category": "Evaluation", "difficulty": "intermediate", "tags": ["metrics", "evaluation", "ranking"]}
+  },
+  {
+    "id": "doc017",
+    "title": "Reciprocal Rank Fusion Algorithm",
+    "content": "Reciprocal Rank Fusion (RRF) is a simple yet effective method for combining multiple ranked lists. For each document, RRF computes the sum of reciprocal ranks across all input rankings: RRF(d) = sum(1 / (k + rank(d))). The constant k (typically 60) mitigates the impact of high rankings. RRF is widely used in hybrid search to combine lexical and semantic rankings without requiring score normalization.",
+    "metadata": {"category": "Search", "difficulty": "intermediate", "tags": ["rrf", "fusion", "ranking"]}
+  },
+  {
+    "id": "doc018",
+    "title": "Document Chunking Strategies",
+    "content": "Document chunking is the process of splitting long documents into smaller segments for retrieval. Common strategies include fixed-size chunks (e.g., 512 tokens), sentence-based splitting, paragraph-based splitting, and semantic chunking. The choice of chunking strategy affects retrieval quality. Overlapping chunks can help preserve context across chunk boundaries. For question answering, chunk sizes between 100-500 tokens often work well.",
+    "metadata": {"category": "Preprocessing", "difficulty": "beginner", "tags": ["chunking", "preprocessing", "documents"]}
+  },
+  {
+    "id": "doc019",
+    "title": "RAG: Retrieval-Augmented Generation",
+    "content": "Retrieval-Augmented Generation (RAG) is a technique that enhances large language models by retrieving relevant documents to augment the generation process. The retrieved context is provided to the LLM along with the query, enabling it to generate responses grounded in external knowledge. RAG combines the strengths of retrieval-based and generation-based approaches, reducing hallucinations and enabling up-to-date responses.",
+    "metadata": {"category": "AI", "difficulty": "intermediate", "tags": ["rag", "llm", "retrieval"]}
+  },
+  {
+    "id": "doc020",
+    "title": "Building Production Search Systems",
+    "content": "Building a production search system requires careful consideration of latency, scalability, and reliability. Key components include a document ingestion pipeline, indexing service, query processing layer, and ranking stage. Best practices include caching frequent queries, using approximate nearest neighbor search for scalability, implementing proper monitoring and logging, and having fallback mechanisms when the primary search fails.",
+    "metadata": {"category": "Engineering", "difficulty": "advanced", "tags": ["production", "scalability", "architecture"]}
+  },
+  {
+    "id": "doc021",
+    "title": "Python for Data Science",
+    "content": "Python is the most popular programming language for data science and machine learning. Key libraries include NumPy for numerical computing, pandas for data manipulation, scikit-learn for machine learning, and matplotlib/seaborn for visualization. Python's simple syntax and extensive ecosystem make it ideal for prototyping and production data science workflows.",
+    "metadata": {"category": "Programming", "difficulty": "beginner", "tags": ["python", "data-science", "libraries"]}
+  },
+  {
+    "id": "doc022",
+    "title": "API Design Best Practices",
+    "content": "Good API design focuses on consistency, simplicity, and developer experience. REST APIs should use proper HTTP methods (GET, POST, PUT, DELETE), meaningful resource URLs, and appropriate status codes. Versioning, pagination, filtering, and rate limiting are essential features. Documentation with OpenAPI/Swagger helps developers understand and integrate with your API.",
+    "metadata": {"category": "Engineering", "difficulty": "intermediate", "tags": ["api", "rest", "design"]}
+  },
+  {
+    "id": "doc023",
+    "title": "Docker Containerization",
+    "content": "Docker is a platform for developing, shipping, and running applications in containers. Containers package an application with all its dependencies into a standardized unit. Key concepts include images (blueprints), containers (running instances), Dockerfiles (build instructions), and Docker Compose for multi-container applications. Docker enables consistent environments across development, testing, and production.",
+    "metadata": {"category": "DevOps", "difficulty": "beginner", "tags": ["docker", "containers", "deployment"]}
+  },
+  {
+    "id": "doc024",
+    "title": "Continuous Integration and Deployment",
+    "content": "CI/CD (Continuous Integration/Continuous Deployment) is a development practice where developers integrate code into a shared repository frequently. Each integration is verified by automated builds and tests. CD extends CI by automatically deploying all code changes to testing or production environments after the build stage. Popular CI/CD tools include GitHub Actions, GitLab CI, Jenkins, and CircleCI.",
+    "metadata": {"category": "DevOps", "difficulty": "intermediate", "tags": ["ci-cd", "automation", "deployment"]}
+  },
+  {
+    "id": "doc025",
+    "title": "Text Preprocessing for NLP",
+    "content": "Text preprocessing is crucial for NLP tasks. Common steps include tokenization (splitting text into tokens), lowercasing, removing punctuation and special characters, stopword removal, stemming (reducing words to roots), and lemmatization (converting to dictionary form). The choice of preprocessing steps depends on the task—some modern approaches skip preprocessing to preserve information.",
+    "metadata": {"category": "NLP", "difficulty": "beginner", "tags": ["preprocessing", "tokenization", "nlp"]}
+  },
+  {
+    "id": "doc026",
+    "title": "BERT Model Architecture",
+    "content": "BERT (Bidirectional Encoder Representations from Transformers) is a transformer-based language model that generates contextualized word representations. BERT is pre-trained on masked language modeling and next sentence prediction tasks. It comes in two sizes: BERT-base (12 layers, 110M parameters) and BERT-large (24 layers, 340M parameters). BERT revolutionized NLP by enabling transfer learning from large pre-trained models.",
+    "metadata": {"category": "AI", "difficulty": "intermediate", "tags": ["bert", "transformers", "pretraining"]}
+  },
+  {
+    "id": "doc027",
+    "title": "GPT and Large Language Models",
+    "content": "GPT (Generative Pre-trained Transformer) is a family of large language models developed by OpenAI. GPT models are trained on massive text corpora to predict the next token in a sequence. They can generate coherent text, answer questions, write code, and perform many other tasks. GPT-4, the latest version, demonstrates remarkable reasoning and multi-modal capabilities.",
+    "metadata": {"category": "AI", "difficulty": "intermediate", "tags": ["gpt", "llm", "generation"]}
+  },
+  {
+    "id": "doc028",
+    "title": "Attention Mechanism in Deep Learning",
+    "content": "The attention mechanism allows neural networks to focus on relevant parts of the input when producing output. Self-attention computes attention weights between all pairs of positions in a sequence. Multi-head attention runs multiple attention functions in parallel, allowing the model to attend to information from different representation subspaces. Attention is the key innovation behind transformer models.",
+    "metadata": {"category": "AI", "difficulty": "advanced", "tags": ["attention", "neural-networks", "transformers"]}
+  },
+  {
+    "id": "doc029",
+    "title": "Cosine Similarity for Text Comparison",
+    "content": "Cosine similarity measures the cosine of the angle between two vectors, commonly used to compare text embeddings. It ranges from -1 to 1, where 1 indicates identical direction. For normalized vectors, cosine similarity equals the dot product. Cosine similarity is preferred over Euclidean distance for text because it's invariant to vector magnitude, focusing on the angle (direction) rather than length.",
+    "metadata": {"category": "ML", "difficulty": "beginner", "tags": ["similarity", "vectors", "comparison"]}
+  },
+  {
+    "id": "doc030",
+    "title": "Approximate Nearest Neighbor Search",
+    "content": "Approximate Nearest Neighbor (ANN) search finds points that are approximately the nearest neighbors, trading some accuracy for speed. ANN algorithms include locality-sensitive hashing (LSH), hierarchical navigable small world (HNSW), and product quantization. These algorithms enable searching billions of vectors in milliseconds, making large-scale semantic search practical. Libraries like FAISS and Annoy implement efficient ANN algorithms.",
+    "metadata": {"category": "Algorithms", "difficulty": "advanced", "tags": ["ann", "nearest-neighbor", "algorithms"]}
+  }
+]
