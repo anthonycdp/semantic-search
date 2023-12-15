@@ -1,0 +1,35 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - API_HOST=0.0.0.0
+      - API_PORT=8000
+      - EMBEDDING_MODEL=all-MiniLM-L6-v2
+    volumes:
+      - ./data:/app/data
+      - model_cache:/root/.cache/huggingface
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/api/v1/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+
+  benchmark:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: python benchmarks/run_benchmark.py
+    volumes:
+      - ./data:/app/data
+      - ./benchmarks:/app/benchmarks
+      - model_cache:/root/.cache/huggingface
+    profiles:
+      - benchmark
+
+volumes:
+  model_cache:
